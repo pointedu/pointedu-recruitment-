@@ -98,6 +98,26 @@
       height: 100%;
     }
     
+    /* New logo styles */
+    .new-logo {
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .nav .new-logo {
+      width: 42px;
+      height: 42px;
+    }
+    
+    .footer-logo {
+      width: 56px;
+      height: 56px;
+      margin: 0 auto 1.5rem;
+    }
+    
     .nav-actions {
       display: flex;
       gap: 1rem;
@@ -1264,26 +1284,27 @@
   <nav class="nav">
     <div class="nav-container">
       <a href="#" class="logo">
-        <div class="logo-icon">
-          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <!-- 녹색 섹션 (왼쪽 위) -->
-            <path d="M 50 50 L 50 10 A 40 40 0 0 0 10 50 Z" fill="#6BBF39" />
-            <circle cx="15" cy="15" r="8" fill="#6BBF39" />
-            
-            <!-- 파란색 섹션 (오른쪽 위) -->
-            <path d="M 50 50 L 90 50 A 40 40 0 0 0 50 10 Z" fill="#29ABE2" />
-            <circle cx="85" cy="15" r="8" fill="#29ABE2" />
-            
-            <!-- 빨간색 섹션 (오른쪽 아래) -->
-            <path d="M 50 50 L 50 90 A 40 40 0 0 0 90 50 Z" fill="#FF4500" />
-            <circle cx="85" cy="85" r="8" fill="#FF4500" />
-            
-            <!-- 회색 섹션 (왼쪽 아래) -->
-            <path d="M 50 50 L 10 50 A 40 40 0 0 0 50 90 Z" fill="#808080" />
-            <rect x="7" y="77" width="16" height="16" fill="#808080" />
+        <div class="new-logo">
+          <svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+            <!-- Circular segments forming a person-like shape -->
+            <g transform="translate(50, 50)">
+              <!-- Top green circle (head) -->
+              <circle cx="-25" cy="-20" r="12" fill="#6AB757"/>
+              <!-- Top blue circle (head) -->
+              <circle cx="25" cy="-20" r="12" fill="#4A90E2"/>
+              <!-- Green arc segment -->
+              <path d="M -40 0 A 40 40 0 0 1 -20 -35" stroke="#6AB757" stroke-width="20" fill="none" stroke-linecap="round"/>
+              <!-- Blue arc segment -->
+              <path d="M 20 -35 A 40 40 0 0 1 40 0" stroke="#4A90E2" stroke-width="20" fill="none" stroke-linecap="round"/>
+              <!-- Orange arc segment -->
+              <path d="M 40 0 A 40 40 0 0 1 0 40" stroke="#FF6B35" stroke-width="20" fill="none" stroke-linecap="round"/>
+              <!-- Gray arc segment -->
+              <path d="M 0 40 A 40 40 0 0 1 -40 0" stroke="#95989A" stroke-width="20" fill="none" stroke-linecap="round"/>
+              <!-- Orange dot -->
+              <circle cx="35" cy="25" r="8" fill="#FF6B35"/>
+            </g>
           </svg>
         </div>
-        포인트교육
       </a>
       <div class="nav-actions">
         <a href="#benefits" class="btn btn-secondary">혜택보기</a>
@@ -1648,25 +1669,26 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <div style="display: flex; align-items: center; justify-content: center; gap: 0.75rem; margin-bottom: 1rem;">
-        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="width: 36px; height: 36px;">
-          <!-- 녹색 섹션 (왼쪽 위) -->
-          <path d="M 50 50 L 50 10 A 40 40 0 0 0 10 50 Z" fill="#6BBF39" />
-          <circle cx="15" cy="15" r="8" fill="#6BBF39" />
-          
-          <!-- 파란색 섹션 (오른쪽 위) -->
-          <path d="M 50 50 L 90 50 A 40 40 0 0 0 50 10 Z" fill="#29ABE2" />
-          <circle cx="85" cy="15" r="8" fill="#29ABE2" />
-          
-          <!-- 빨간색 섹션 (오른쪽 아래) -->
-          <path d="M 50 50 L 50 90 A 40 40 0 0 0 90 50 Z" fill="#FF4500" />
-          <circle cx="85" cy="85" r="8" fill="#FF4500" />
-          
-          <!-- 회색 섹션 (왼쪽 아래) -->
-          <path d="M 50 50 L 10 50 A 40 40 0 0 0 50 90 Z" fill="#808080" />
-          <rect x="7" y="77" width="16" height="16" fill="#808080" />
+      <div class="footer-logo">
+        <svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: 100%;">
+          <!-- Circular segments forming a person-like shape -->
+          <g transform="translate(50, 50)">
+            <!-- Top green circle (head) -->
+            <circle cx="-25" cy="-20" r="12" fill="#6AB757"/>
+            <!-- Top blue circle (head) -->
+            <circle cx="25" cy="-20" r="12" fill="#4A90E2"/>
+            <!-- Green arc segment -->
+            <path d="M -40 0 A 40 40 0 0 1 -20 -35" stroke="#6AB757" stroke-width="20" fill="none" stroke-linecap="round"/>
+            <!-- Blue arc segment -->
+            <path d="M 20 -35 A 40 40 0 0 1 40 0" stroke="#4A90E2" stroke-width="20" fill="none" stroke-linecap="round"/>
+            <!-- Orange arc segment -->
+            <path d="M 40 0 A 40 40 0 0 1 0 40" stroke="#FF6B35" stroke-width="20" fill="none" stroke-linecap="round"/>
+            <!-- Gray arc segment -->
+            <path d="M 0 40 A 40 40 0 0 1 -40 0" stroke="#95989A" stroke-width="20" fill="none" stroke-linecap="round"/>
+            <!-- Orange dot -->
+            <circle cx="35" cy="25" r="8" fill="#FF6B35"/>
+          </g>
         </svg>
-        <p style="margin: 0; font-size: 1.25rem; font-weight: 700; color: #fff; letter-spacing: -0.3px;">포인트교육 주식회사</p>
       </div>
       <p><strong>본사:</strong> 경상북도 영주시 구성로150번길 19</p>
       <p><strong>구미지점:</strong> 경상북도 구미시 1공단로 182</p>
