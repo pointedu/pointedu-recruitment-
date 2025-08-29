@@ -1,0 +1,1659 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>제8기 포인트교육 진로직업체험 강사모집</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    
+    :root{
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --secondary: #059669;
+      --secondary-dark: #047857;
+      --accent: #f59e0b;
+      --success: #10b981;
+      --warning: #f59e0b;
+      --error: #ef4444;
+      
+      --gray-50: #f9fafb;
+      --gray-100: #f3f4f6;
+      --gray-200: #e5e7eb;
+      --gray-300: #d1d5db;
+      --gray-400: #9ca3af;
+      --gray-500: #6b7280;
+      --gray-600: #4b5563;
+      --gray-700: #374151;
+      --gray-800: #1f2937;
+      --gray-900: #111827;
+      
+      --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+      --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+      --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+      --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+      --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+      
+      --font-base: 'Noto Sans KR', 'Inter', system-ui, -apple-system, 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Nanum Gothic', sans-serif;
+    }
+    
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    body {
+      font-family: var(--font-base);
+      line-height: 1.7;
+      color: var(--gray-800);
+      background: var(--gray-50);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      letter-spacing: -0.2px;
+      word-break: keep-all;
+    }
+    
+    /* Navigation */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 50;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--gray-200);
+      padding: 1rem 0;
+    }
+    
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--primary);
+      text-decoration: none;
+    }
+    
+    .logo-icon {
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .logo-icon svg {
+      width: 100%;
+      height: 100%;
+    }
+    
+    .nav-actions {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+    
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      border: none;
+      font-size: 0.875rem;
+    }
+    
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+      box-shadow: var(--shadow);
+    }
+    
+    .btn-primary:hover {
+      background: var(--primary-dark);
+      box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
+      transform: translateY(-3px) scale(1.05);
+    }
+    
+    .btn-primary:active {
+      transform: translateY(-1px) scale(1.02);
+    }
+    
+    .btn-secondary {
+      background: white;
+      color: var(--gray-700);
+      border: 1px solid var(--gray-300);
+    }
+    
+    .btn-secondary:hover {
+      background: var(--gray-50);
+      border-color: var(--gray-400);
+    }
+    
+    .btn-lg {
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      font-weight: 700;
+      min-width: 200px;
+      justify-content: center;
+    }
+    
+    /* Hero Section */
+    .hero {
+      margin-top: 80px;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+      color: white;
+      padding: 4rem 0;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    
+    .hero-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .hero-content {
+      display: block;
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+      font-weight: 700;
+      letter-spacing: -0.3px;
+    }
+    
+    .hero-text h1 {
+      font-size: clamp(2.25rem, 4vw, 3.5rem);
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+      animation: fadeInUp 0.8s ease-out;
+    }
+    
+    .hero-text p {
+      font-size: 1.25rem;
+      opacity: 0.95;
+      margin-bottom: 2rem;
+      line-height: 1.8;
+      letter-spacing: -0.01em;
+      animation: fadeInUp 0.8s ease-out 0.2s both;
+    }
+    
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 2rem;
+      border-radius: 16px;
+      backdrop-filter: blur(10px);
+    }
+    
+    .stat {
+      text-align: center;
+    }
+    
+    .stat-number {
+      font-size: 2rem;
+      font-weight: 800;
+      display: block;
+    }
+    
+    .stat-label {
+      font-size: 0.875rem;
+      opacity: 0.8;
+      margin-top: 0.25rem;
+    }
+    
+    .hero-cta {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2rem;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      animation: fadeInUp 1s ease-out 0.5s both;
+    }
+    
+    /* Trust Section */
+    .trust {
+      background: white;
+      padding: 3rem 0;
+      border-bottom: 1px solid var(--gray-200);
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    
+    .trust-content {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      text-align: center;
+    }
+    
+    .trust-item {
+      padding: 1.5rem;
+      text-align: center;
+    }
+    
+    .trust-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--gray-100);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem;
+      font-size: 1.5rem;
+    }
+    
+    .trust-title {
+      font-weight: 600;
+      color: var(--gray-900);
+      margin-bottom: 0.5rem;
+      word-break: keep-all;
+      line-height: 1.4;
+    }
+    
+    .trust-desc {
+      color: var(--gray-600);
+      font-size: 0.875rem;
+      word-break: keep-all;
+      line-height: 1.5;
+    }
+    
+    /* Benefits Section */
+    .benefits {
+      padding: 6rem 0;
+      background: var(--gray-50);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .benefits::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -10%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(37, 99, 235, 0.05) 0%, transparent 70%);
+      animation: float 6s ease-in-out infinite;
+    }
+    
+    .section-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    
+    .section-title {
+      font-size: 2.25rem;
+      font-weight: 700;
+      color: var(--gray-900);
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.3px;
+      word-break: keep-all;
+    }
+    
+    .section-desc {
+      font-size: 1.125rem;
+      color: var(--gray-600);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    /* Benefits Section - Perfect Grid Alignment */
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      align-items: stretch;
+    }
+    
+    .benefit-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      transition: all 0.3s ease;
+      border: 1px solid var(--gray-200);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    
+    .benefit-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+    
+    .benefit-icon {
+      width: 56px;
+      height: 56px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+      color: white;
+      flex-shrink: 0;
+    }
+    
+    .benefit-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--gray-900);
+      margin-bottom: 0.75rem;
+      flex-shrink: 0;
+    }
+    
+    .benefit-desc {
+      color: var(--gray-600);
+      line-height: 1.75;
+      flex-grow: 1;
+      font-size: 0.95rem;
+    }
+    
+    .benefit-highlight {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      padding: 0.25rem 0.75rem;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      margin-top: 1rem;
+    }
+    
+    /* Partnership Section - Consistent Card Layout */
+    .partnership-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      align-items: stretch;
+    }
+    
+    .partnership-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      transition: all 0.3s ease;
+      border: 1px solid var(--gray-200);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      text-align: center;
+    }
+    
+    .partnership-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+    
+    .partnership-icon {
+      width: 56px;
+      height: 56px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin: 0 auto 1.5rem;
+      color: white;
+      flex-shrink: 0;
+    }
+    
+    .partnership-title {
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: var(--gray-900);
+      margin-bottom: 0.75rem;
+      flex-shrink: 0;
+    }
+    
+    .partnership-desc {
+      color: var(--gray-600);
+      line-height: 1.6;
+      flex-grow: 1;
+    }
+    
+    /* Fields Section */
+    .fields {
+      padding: 6rem 0;
+      background: white;
+      position: relative;
+    }
+    
+    .fields::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gray-200), transparent);
+    }
+    
+    .fields-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    
+    .fields-row {
+      display: contents;
+    }
+    
+    .fields-row.first .field-card:first-child {
+      grid-column: 1 / 3;
+    }
+    
+    .fields-row.second,
+    .fields-row.third {
+      display: contents;
+    }
+    
+    .field-card {
+      border-radius: 20px;
+      padding: 3rem 2.5rem;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      min-height: 200px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+    }
+    
+    .field-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-xl);
+    }
+    
+    .field-card.industry-4 {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+    
+    .field-card.esd {
+      background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    }
+    
+    .field-card.art {
+      background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+    }
+    
+    .field-card.medical {
+      background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+      color: var(--gray-800);
+    }
+    
+    .field-card.professional {
+      background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+      color: var(--gray-800);
+    }
+    
+    .field-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.05);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    
+    .field-card:hover::before {
+      opacity: 1;
+    }
+    
+    .field-icon {
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+      display: block;
+    }
+    
+    .field-title {
+      font-size: 1.75rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+    
+    .field-desc {
+      opacity: 0.95;
+      line-height: 1.6;
+      font-size: 1.1rem;
+    }
+    
+    /* Process Section */
+    .process {
+      padding: 6rem 0;
+      background: var(--gray-50);
+      position: relative;
+    }
+    
+    .process-timeline {
+      max-width: 800px;
+      margin: 0 auto;
+      position: relative;
+    }
+    
+    .process-timeline::before {
+      content: '';
+      position: absolute;
+      left: 2rem;
+      top: 3rem;
+      bottom: 3rem;
+      width: 2px;
+      background: var(--gray-300);
+    }
+    
+    .process-step {
+      display: flex;
+      gap: 2rem;
+      margin-bottom: 3rem;
+      position: relative;
+    }
+    
+    .process-step:last-child {
+      margin-bottom: 0;
+    }
+    
+    .step-number {
+      width: 4rem;
+      height: 4rem;
+      background: var(--primary);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1.125rem;
+      position: relative;
+      z-index: 2;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+    }
+    
+    .process-step:hover .step-number {
+      transform: scale(1.2) rotate(360deg);
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+    }
+    
+    .step-content {
+      flex: 1;
+      background: white;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+    }
+    
+    .process-step:hover .step-content {
+      box-shadow: var(--shadow-lg);
+      border-color: var(--primary);
+      transform: translateX(10px);
+    }
+    
+    .step-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--gray-900);
+      margin-bottom: 0.75rem;
+    }
+    
+    .step-desc {
+      color: var(--gray-600);
+      line-height: 1.6;
+    }
+    
+    .step-duration {
+      background: var(--gray-100);
+      color: var(--gray-700);
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.25rem 0.75rem;
+      border-radius: 6px;
+      display: inline-block;
+      margin-top: 1rem;
+    }
+    
+    /* Pricing Section */
+    .pricing {
+      padding: 5rem 0;
+      background: white;
+    }
+    
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .pricing-card {
+      background: white;
+      border: 2px solid var(--gray-200);
+      border-radius: 20px;
+      padding: 2.5rem;
+      text-align: center;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+    
+    .pricing-card.featured {
+      border-color: var(--secondary);
+      transform: scale(1.05);
+      box-shadow: var(--shadow-xl);
+    }
+    
+    .pricing-badge {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--secondary);
+      color: white;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+    }
+    
+    .pricing-type {
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: var(--gray-900);
+      margin-bottom: 0.5rem;
+    }
+    
+    .pricing-subtitle {
+      color: var(--gray-600);
+      font-size: 0.875rem;
+      margin-bottom: 2rem;
+    }
+    
+    .pricing-amount {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+    
+    .pricing-card.featured .pricing-amount {
+      color: var(--secondary);
+    }
+    
+    .pricing-features {
+      list-style: none;
+      text-align: left;
+      margin-bottom: 2rem;
+    }
+    
+    .pricing-features li {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 0.75rem;
+      font-size: 0.875rem;
+    }
+    
+    .pricing-features li::before {
+      content: '✓';
+      color: var(--success);
+      font-weight: 700;
+    }
+    
+    /* Apply Section */
+    .apply {
+      padding: 5rem 0;
+      background: linear-gradient(135deg, var(--gray-900) 0%, var(--gray-800) 100%);
+      color: white;
+      text-align: center;
+    }
+    
+    .apply .section-title {
+      color: white;
+    }
+    
+    .apply .section-desc {
+      color: var(--gray-300);
+    }
+    
+    .apply-form {
+      max-width: 600px;
+      margin: 3rem auto 0;
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+    }
+    
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    
+    .contact-card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 16px;
+      padding: 2rem;
+    }
+    
+    .contact-icon {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    .contact-title {
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    
+    .contact-info {
+      opacity: 0.9;
+    }
+    
+    .contact-info a {
+      color: white;
+      text-decoration: none;
+    }
+    
+    /* Footer */
+    .footer {
+      background: var(--gray-900);
+      color: var(--gray-400);
+      text-align: center;
+      padding: 2rem 0;
+    }
+    
+    .footer p {
+      margin-bottom: 0.5rem;
+    }
+    
+    .footer a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 1024px) {
+      .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .fields-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .trust-content {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .partnership-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .nav-container {
+        padding: 0 1rem;
+      }
+      
+      .hero-stats {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+      
+      .hero-cta {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .benefits-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .fields-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+      }
+      
+      .field-card.large,
+      .field-card.tall {
+        grid-column: span 1;
+        grid-row: span 1;
+      }
+      
+      .pricing-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .pricing-card.featured {
+        transform: none;
+      }
+      
+      .trust-content {
+        grid-template-columns: 1fr;
+      }
+      
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .partnership-grid {
+        grid-template-columns: 1fr !important;
+      }
+      
+      .apply-form {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .process-timeline::before {
+        left: 1rem;
+      }
+      
+      .process-step {
+        gap: 1rem;
+      }
+      
+      .step-number {
+        width: 2rem;
+        height: 2rem;
+        font-size: 0.875rem;
+      }
+    }
+    /* Animation Keyframes */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
+    @keyframes slideInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    
+    @keyframes slideInRight {
+      from {
+        opacity: 0;
+        transform: translateX(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    
+    /* Scroll Animation Classes */
+    .animate-on-scroll {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .animate-on-scroll.animated {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .fade-in-left {
+      opacity: 0;
+      transform: translateX(-30px);
+      transition: all 0.8s ease-out;
+    }
+    
+    .fade-in-left.animated {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    
+    .fade-in-right {
+      opacity: 0;
+      transform: translateX(30px);
+      transition: all 0.8s ease-out;
+    }
+    
+    .fade-in-right.animated {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    
+    .scale-in {
+      opacity: 0;
+      transform: scale(0.9);
+      transition: all 0.6s ease-out;
+    }
+    
+    .scale-in.animated {
+      opacity: 1;
+      transform: scale(1);
+    }
+    
+    /* Enhanced Hover Effects */
+    .benefit-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      border: 1px solid var(--gray-200);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .benefit-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      transform: scaleX(0);
+      transition: transform 0.4s ease;
+      transform-origin: left;
+    }
+    
+    .benefit-card:hover::before {
+      transform: scaleX(1);
+    }
+    
+    .benefit-card:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+      border-color: var(--primary);
+    }
+    
+    .benefit-icon {
+      width: 56px;
+      height: 56px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+      color: white;
+      flex-shrink: 0;
+      transition: all 0.4s ease;
+    }
+    
+    .benefit-card:hover .benefit-icon {
+      transform: rotateY(180deg) scale(1.1);
+      box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-container">
+      <a href="#" class="logo">
+        <div class="logo-icon">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <!-- 녹색 섹션 (왼쪽 위) -->
+            <path d="M 50 50 L 50 10 A 40 40 0 0 0 10 50 Z" fill="#6BBF39" />
+            <circle cx="15" cy="15" r="8" fill="#6BBF39" />
+            
+            <!-- 파란색 섹션 (오른쪽 위) -->
+            <path d="M 50 50 L 90 50 A 40 40 0 0 0 50 10 Z" fill="#29ABE2" />
+            <circle cx="85" cy="15" r="8" fill="#29ABE2" />
+            
+            <!-- 빨간색 섹션 (오른쪽 아래) -->
+            <path d="M 50 50 L 50 90 A 40 40 0 0 0 90 50 Z" fill="#FF4500" />
+            <circle cx="85" cy="85" r="8" fill="#FF4500" />
+            
+            <!-- 회색 섹션 (왼쪽 아래) -->
+            <path d="M 50 50 L 10 50 A 40 40 0 0 0 50 90 Z" fill="#808080" />
+            <rect x="7" y="77" width="16" height="16" fill="#808080" />
+          </svg>
+        </div>
+        포인트교육
+      </a>
+      <div class="nav-actions">
+        <a href="#benefits" class="btn btn-secondary">혜택보기</a>
+        <a href="#apply" class="btn btn-primary">📝 지원하기</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>제8기 진로직업체험<br>강사를 모집합니다</h1>
+          <p>AI·디지털 기반 미래교육의 선두주자와 함께<br>청소년들의 꿈을 키워주세요</p>
+        </div>
+        <div class="hero-cta">
+          <a href="https://naver.me/Fzssfjzz" class="btn btn-primary btn-lg" target="_blank">
+            📝 지금 지원하기
+          </a>
+          <a href="#process" class="btn btn-secondary btn-lg">
+            📋 지원절차 보기
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Company Introduction -->
+  <section style="padding: 4rem 0; background: white; border-bottom: 1px solid var(--gray-200);">
+    <div class="container">
+      <div style="max-width: 900px; margin: 0 auto; text-align: left; line-height: 1.8; color: var(--gray-700);">
+        <p style="margin-bottom: 1.5rem; font-size: 1.1rem;">
+          <strong style="color: var(--primary);">포인트교육(주)</strong>는 예비사회적기업으로서 경북 영주를 중심으로 구미, 김천, 안동, 예천, 봉화, 의성, 청송, 영양, 상주 등 다양한 지역의 초·중·고등학교에서 진로직업체험, 자유학기제 수업, 체험캠프, 진로캠프, 리더십캠프 등을 운영하고 있습니다.
+        </p>
+        <p style="margin-bottom: 1.5rem; font-size: 1.1rem;">
+          2025년 하반기에는 <strong style="color: var(--secondary);">AI·디지털 기반의 미래교육</strong>과 지역 특화 프로그램을 더욱 강화하여, 청소년들에게 새로운 진로 경험을 제공하고자 합니다. 이에 따라 학생들과 함께 성장하며 교육 현장을 이끌어갈 <strong style="color: var(--primary);">제8기 신규 강사님</strong>을 모집합니다.
+        </p>
+        <p style="font-size: 1.1rem;">
+          단순히 지식을 전달하는 강의가 아니라, <strong style="color: var(--gray-900);">아이들의 꿈과 가능성을 발견하도록 돕는 진로교육.</strong> 포인트교육과 함께 미래를 열어갈 선생님들의 많은 지원을 기다립니다.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Section -->
+  <section class="trust">
+    <div class="container">
+      <div class="trust-content">
+        <div class="trust-item">
+          <div class="trust-icon">🏆</div>
+          <h3 class="trust-title">예비사회적기업</h3>
+          <p class="trust-desc">정부 인증을 받은<br>신뢰할 수 있는 교육기관</p>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon">🎯</div>
+          <h3 class="trust-title">10개 지역</h3>
+          <p class="trust-desc">경북 전역의<br>다양한 학교와 파트너십</p>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon">💼</div>
+          <h3 class="trust-title">체계적 운영</h3>
+          <p class="trust-desc">전문적인 교육과정과<br>수업자료 제공</p>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon">📈</div>
+          <h3 class="trust-title">지속 성장</h3>
+          <p class="trust-desc">매년 확대되는<br>교육 프로그램과 기회</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="benefits" id="benefits">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">포인트교육 강사만의 특별한 혜택</h2>
+        <p class="section-desc">체계적인 교육과 지원으로 성공적인 강사 활동을 보장합니다</p>
+      </div>
+      
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="benefit-icon">💰</div>
+          <h3 class="benefit-title">높은 강의료</h3>
+          <p class="benefit-desc">시급 30,000~35,000원의 경쟁력 있는 강의료와 교통비 별도 지급</p>
+          <span class="benefit-highlight">차시별 기준</span>
+        </div>
+        
+        <div class="benefit-card">
+          <div class="benefit-icon">🎓</div>
+          <h3 class="benefit-title">전문 교육 지원</h3>
+          <p class="benefit-desc">STEAM융합 지도사 자격 취득 및 체계적인 강사 양성과정 제공</p>
+          <span class="benefit-highlight">32시간 완성 과정</span>
+        </div>
+        
+        <div class="benefit-card">
+          <div class="benefit-icon">📚</div>
+          <h3 class="benefit-title">수업자료 제공</h3>
+          <p class="benefit-desc">PPT, 영상, 교구까지 모든 수업자료를 무료로 제공하여 준비 부담 최소화</p>
+          <span class="benefit-highlight">100% 제공</span>
+        </div>
+        
+        <div class="benefit-card">
+          <div class="benefit-icon">🚗</div>
+          <h3 class="benefit-title">교통비 지원</h3>
+          <p class="benefit-desc">거리별 차등 지급으로 교통비 부담 없이 다양한 지역에서 활동 가능</p>
+          <span class="benefit-highlight">최대 45,000원</span>
+        </div>
+        
+        <div class="benefit-card">
+          <div class="benefit-icon">💎</div>
+          <h3 class="benefit-title">페이백 혜택</h3>
+          <p class="benefit-desc">신규 강사는 19만원 교육비 지원 후 10회 출강 시 추가로 10만원 환급하여 실질 교육비 부담 최소화</p>
+          <span class="benefit-highlight">실질 교육비 6만원</span>
+        </div>
+        
+        <div class="benefit-card">
+          <div class="benefit-icon">🤝</div>
+          <h3 class="benefit-title">지속적 지원</h3>
+          <p class="benefit-desc">강사 풀 등록 후 지속적인 출강 기회 제공 및 경력 관리</p>
+          <span class="benefit-highlight">장기 파트너십</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fields Section -->
+  <section class="fields">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">다양한 진로체험 분야</h2>
+        <p class="section-desc">미래 사회가 요구하는 핵심 직업군별 전문 체험 프로그램</p>
+      </div>
+      
+      <div class="fields-grid">
+        <div class="fields-row first">
+          <div class="field-card industry-4">
+            <div class="field-icon">🤖</div>
+            <h3 class="field-title">4차산업</h3>
+            <p class="field-desc">AI, 빅데이터, 드론, 로봇공학, 메이커스, 3D프린팅 등 미래 핵심 기술 분야의 직업 체험과 교육</p>
+          </div>
+        </div>
+        
+        <div class="fields-row second">
+          <div class="field-card esd">
+            <div class="field-icon">🌱</div>
+            <h3 class="field-title">ESD교육</h3>
+            <p class="field-desc">지속가능발전교육, 환경보호, 공정무역, 사회적경제 등 지구와 미래를 생각하는 교육</p>
+          </div>
+          
+          <div class="field-card art">
+            <div class="field-icon">🎨</div>
+            <h3 class="field-title">ART 계열</h3>
+            <p class="field-desc">뷰티아트, 그래픽디자인, 플로리스트, 영상편집 등 창의적 예술 분야 직업 체험</p>
+          </div>
+        </div>
+        
+        <div class="fields-row third">
+          <div class="field-card medical">
+            <div class="field-icon">⚕️</div>
+            <h3 class="field-title">메디컬 계열</h3>
+            <p class="field-desc">의사, 약사, 간호사, 한의사, 치과의사 등 의료진 직업 체험 프로그램</p>
+          </div>
+          
+          <div class="field-card professional">
+            <div class="field-icon">☕</div>
+            <h3 class="field-title">전문직 계열</h3>
+            <p class="field-desc">바리스타, 소믈리에, 과학수사관, 셰프, 파티시에 등 전문 기술직 체험</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section class="process" id="process">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">지원부터 활동까지 한눈에</h2>
+        <p class="section-desc">간단한 절차로 전문 강사가 되어보세요</p>
+      </div>
+      
+      <div class="process-timeline">
+        <div class="process-step">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h3 class="step-title">온라인 지원</h3>
+            <p class="step-desc">네이버폼을 통해 간편하게 지원서를 작성하고 제출해주세요. 관련 경력이나 자격증이 있다면 함께 기재해주세요.</p>
+            <span class="step-duration">소요시간: 10분</span>
+          </div>
+        </div>
+        
+        <div class="process-step">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h3 class="step-title">서류 심사</h3>
+            <p class="step-desc">제출해주신 지원서를 바탕으로 선착순 15명을 선발합니다. 결과는 개별 연락을 통해 안내드립니다.</p>
+            <span class="step-duration">소요시간: 3-5일</span>
+          </div>
+        </div>
+        
+        <div class="process-step">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h3 class="step-title">강사 양성 교육</h3>
+            <p class="step-desc">오프라인 16시간 + 온라인 16시간의 체계적인 교육과정을 통해 전문 강사로 성장할 수 있습니다.</p>
+            <span class="step-duration">교육일: 2025.10.04(토)</span>
+          </div>
+        </div>
+        
+        <div class="process-step">
+          <div class="step-number">4</div>
+          <div class="step-content">
+            <h3 class="step-title">자격증 취득</h3>
+            <p class="step-desc">STEAM융합 지도사 자격시험에 응시하여 공식 자격을 취득합니다. 교재와 응시료는 교육비에 포함되어 있습니다.</p>
+            <span class="step-duration">응시 후 2주 내 발급</span>
+          </div>
+        </div>
+        
+        <div class="process-step">
+          <div class="step-number">5</div>
+          <div class="step-content">
+            <h3 class="step-title">강사 활동 시작</h3>
+            <p class="step-desc">포인트교육 강사 풀에 등록되어 각 학교와 기관의 요청에 따라 출강하며 전문 강사로 활동합니다.</p>
+            <span class="step-duration">교육 완료 후 즉시</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section class="pricing">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">합리적인 교육비</h2>
+        <p class="section-desc">경력에 따른 차등 교육비로 누구나 부담 없이 시작할 수 있습니다</p>
+      </div>
+      
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <h3 class="pricing-type">🆕 신규 강사</h3>
+          <p class="pricing-subtitle">진로교육 경험이 없는 분</p>
+          <div class="pricing-amount">350,000원</div>
+          <div style="background: linear-gradient(135deg, var(--secondary), var(--success)); color: white; padding: 0.75rem 1rem; border-radius: 12px; margin: 1rem 0; font-weight: 700; font-size: 1.1rem;">
+            🎁 19만원 교육비 지원!<br>
+            <span style="font-size: 0.9rem; opacity: 0.9;">실제 납부 160,000원</span>
+          </div>
+          
+          <ul class="pricing-features">
+            <li>32시간 강사 양성과정</li>
+            <li>STEAM융합 지도사 자격증</li>
+            <li>교재 및 응시료 포함</li>
+            <li>수업자료 무제한 제공</li>
+            <li><strong style="color: var(--secondary); font-size: 1.1em;">10회 출강 시 10만원 페이백</strong></li>
+          </ul>
+          
+          <a href="https://naver.me/Fzssfjzz" class="btn btn-primary" target="_blank">신규 지원하기</a>
+        </div>
+        
+        <div class="pricing-card featured">
+          <div class="pricing-badge">👨‍🏫 추천</div>
+          <h3 class="pricing-type">경력 강사</h3>
+          <p class="pricing-subtitle">진로수업 10회 이상 경험자</p>
+          <div class="pricing-amount">교육비 면제</div>
+          
+          <ul class="pricing-features">
+            <li>교육비 100% 면제</li>
+            <li>경력 인정 우대</li>
+            <li>우선 강사 배정</li>
+            <li>자격증 응시료만 60,000원</li>
+            <li>즉시 강사 활동 가능</li>
+            <li>교재 및 발급비 포함</li>
+          </ul>
+          
+          <a href="https://naver.me/Fzssfjzz" class="btn btn-primary" target="_blank">경력자 지원하기</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Partnership Section -->
+  <section class="partnership" style="padding: 5rem 0; background: var(--gray-50);">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">🤝 프로그램 협업 가능</h2>
+        <p class="section-desc">전문성을 활용한 맞춤형 프로그램 개발에 참여하세요</p>
+      </div>
+      
+      <div class="partnership-grid">
+        <div class="partnership-card">
+          <div class="partnership-icon">💻</div>
+          <h3 class="partnership-title">IT/기술</h3>
+          <p class="partnership-desc">코딩, 앱개발, AI기술 관련 프로그램 개발</p>
+        </div>
+        
+        <div class="partnership-card">
+          <div class="partnership-icon">🎨</div>
+          <h3 class="partnership-title">창작/디자인</h3>
+          <p class="partnership-desc">그래픽디자인, 영상편집 관련 프로그램 운영</p>
+        </div>
+        
+        <div class="partnership-card">
+          <div class="partnership-icon">⚕️</div>
+          <h3 class="partnership-title">의료/건강</h3>
+          <p class="partnership-desc">의료 직업소개, 응급처치, 건강교육 프로그램</p>
+        </div>
+        
+        <div class="partnership-card">
+          <div class="partnership-icon">🌱</div>
+          <h3 class="partnership-title">환경/에너지</h3>
+          <p class="partnership-desc">지속가능발전, 친환경 기술 교육 프로그램</p>
+        </div>
+      </div>
+      
+      <div style="margin-top: 2rem; text-align: center; padding: 2rem; background: white; border-radius: 16px; box-shadow: var(--shadow);">
+        <p style="color: var(--gray-700); margin-bottom: 1rem;"><strong>협업 문의</strong></p>
+        <p style="color: var(--gray-600);">📞 054-632-7864 | 📧 <a href="mailto:azayo350@naver.com" style="color: var(--primary); text-decoration: none;">azayo350@naver.com</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Apply Section -->
+  <section class="apply" id="apply">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">지금 바로 시작하세요!</h2>
+        <p class="section-desc">미래교육의 선두주자가 되어 청소년들의 꿈을 함께 키워나가요</p>
+      </div>
+      
+      <div class="apply-form">
+        <a href="https://naver.me/Fzssfjzz" class="btn btn-primary btn-lg" target="_blank">
+          📝 네이버폼으로 지원하기
+        </a>
+      </div>
+      
+      <div class="contact-grid">
+        <div class="contact-card">
+          <div class="contact-icon">📞</div>
+          <h3 class="contact-title">대표 전화</h3>
+          <p class="contact-info">054-632-7864</p>
+        </div>
+        
+        <div class="contact-card">
+          <div class="contact-icon">📱</div>
+          <h3 class="contact-title">담당자</h3>
+          <p class="contact-info">010-9355-7864</p>
+        </div>
+        
+        <div class="contact-card">
+          <div class="contact-icon">📧</div>
+          <h3 class="contact-title">이메일 문의</h3>
+          <p class="contact-info">
+            <a href="mailto:azayo350@naver.com">azayo350@naver.com</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div style="display: flex; align-items: center; justify-content: center; gap: 0.75rem; margin-bottom: 1rem;">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="width: 36px; height: 36px;">
+          <!-- 녹색 섹션 (왼쪽 위) -->
+          <path d="M 50 50 L 50 10 A 40 40 0 0 0 10 50 Z" fill="#6BBF39" />
+          <circle cx="15" cy="15" r="8" fill="#6BBF39" />
+          
+          <!-- 파란색 섹션 (오른쪽 위) -->
+          <path d="M 50 50 L 90 50 A 40 40 0 0 0 50 10 Z" fill="#29ABE2" />
+          <circle cx="85" cy="15" r="8" fill="#29ABE2" />
+          
+          <!-- 빨간색 섹션 (오른쪽 아래) -->
+          <path d="M 50 50 L 50 90 A 40 40 0 0 0 90 50 Z" fill="#FF4500" />
+          <circle cx="85" cy="85" r="8" fill="#FF4500" />
+          
+          <!-- 회색 섹션 (왼쪽 아래) -->
+          <path d="M 50 50 L 10 50 A 40 40 0 0 0 50 90 Z" fill="#808080" />
+          <rect x="7" y="77" width="16" height="16" fill="#808080" />
+        </svg>
+        <p style="margin: 0; font-size: 1.25rem; font-weight: 700; color: #fff; letter-spacing: -0.3px;">포인트교육 주식회사</p>
+      </div>
+      <p><strong>본사:</strong> 경상북도 영주시 구성로150번길 19</p>
+      <p><strong>구미지점:</strong> 경상북도 구미시 1공단로 182</p>
+      <p>예비사회적기업 | <a href="https://www.pointedu.co.kr" target="_blank">www.pointedu.co.kr</a></p>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          const offsetTop = target.offsetTop - 80;
+          window.scrollTo({
+            top: offsetTop,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+    // Add scroll effect to navigation
+    window.addEventListener('scroll', () => {
+      const nav = document.querySelector('.nav');
+      if (window.scrollY > 50) {
+        nav.style.background = 'rgba(255, 255, 255, 0.98)';
+        nav.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
+      } else {
+        nav.style.background = 'rgba(255, 255, 255, 0.95)';
+        nav.style.boxShadow = 'none';
+      }
+    });
+
+    // Intersection Observer for scroll animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animated');
+          
+          // Stagger animation for grid items
+          if (entry.target.closest('.benefits-grid, .fields-grid, .partnership-grid')) {
+            const items = entry.target.parentElement.children;
+            Array.from(items).forEach((item, index) => {
+              setTimeout(() => {
+                item.classList.add('animated');
+              }, index * 100);
+            });
+          }
+        }
+      });
+    }, observerOptions);
+
+    // Add animation classes to elements
+    document.addEventListener('DOMContentLoaded', () => {
+      // Add animate-on-scroll class to sections
+      document.querySelectorAll('.section-header').forEach(el => {
+        el.classList.add('animate-on-scroll');
+        observer.observe(el);
+      });
+
+      // Add scale-in animation to cards
+      document.querySelectorAll('.benefit-card, .field-card, .partnership-card, .pricing-card').forEach(el => {
+        el.classList.add('scale-in');
+        observer.observe(el);
+      });
+
+      // Add fade animations to process steps
+      document.querySelectorAll('.process-step').forEach((el, index) => {
+        if (index % 2 === 0) {
+          el.classList.add('fade-in-left');
+        } else {
+          el.classList.add('fade-in-right');
+        }
+        observer.observe(el);
+      });
+
+      // Add animation to trust items
+      document.querySelectorAll('.trust-item').forEach(el => {
+        el.classList.add('animate-on-scroll');
+        observer.observe(el);
+      });
+
+      // Add number counter animation
+      const counters = document.querySelectorAll('.stat-number');
+      const counterObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
+            const target = entry.target;
+            const finalValue = parseInt(target.textContent);
+            let currentValue = 0;
+            const increment = finalValue / 30;
+            
+            const updateCounter = () => {
+              currentValue += increment;
+              if (currentValue < finalValue) {
+                target.textContent = Math.ceil(currentValue) + '+';
+                requestAnimationFrame(updateCounter);
+              } else {
+                target.textContent = finalValue + '+';
+                target.classList.add('counted');
+              }
+            };
+            updateCounter();
+          }
+        });
+      }, observerOptions);
+
+      counters.forEach(counter => {
+        if (counter.textContent) {
+          const value = counter.textContent.replace('+', '');
+          counter.setAttribute('data-value', value);
+          counter.textContent = '0+';
+          counterObserver.observe(counter);
+        }
+      });
+
+      // Parallax effect for hero section
+      window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        const hero = document.querySelector('.hero');
+        if (hero && scrolled < 800) {
+          hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+        }
+      });
+
+      // Add floating animation to icons
+      document.querySelectorAll('.benefit-icon, .partnership-icon').forEach((icon, index) => {
+        icon.style.animationDelay = `${index * 0.2}s`;
+      });
+    });
+
+    // Interactive button effect
+    document.querySelectorAll('.btn').forEach(button => {
+      button.addEventListener('mouseenter', function(e) {
+        const rect = this.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        const ripple = document.createElement('span');
+        ripple.style.cssText = `
+          position: absolute;
+          background: rgba(255,255,255,0.5);
+          border-radius: 50%;
+          pointer-events: none;
+          width: 100px;
+          height: 100px;
+          top: ${y - 50}px;
+          left: ${x - 50}px;
+          transform: scale(0);
+          animation: ripple 0.6s ease-out;
+        `;
+        
+        this.style.position = 'relative';
+        this.style.overflow = 'hidden';
+        this.appendChild(ripple);
+        
+        setTimeout(() => ripple.remove(), 600);
+      });
+    });
+
+    // Add ripple animation keyframe
+    const style = document.createElement('style');
+    style.textContent = `
+      @keyframes ripple {
+        to {
+          transform: scale(4);
+          opacity: 0;
+        }
+      }
+    `;
+    document.head.appendChild(style);
+  </script>
+</body>
+</html>
